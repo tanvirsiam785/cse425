@@ -1,0 +1,206 @@
+{
+  "test_macro_f1": 0.6274260944342135,
+  "test_micro_f1": 0.6955865711052434,
+  "b1_baseline_macro_f1": 0.0,
+  "b1_baseline_micro_f1": 0.0,
+  "tag_names": [
+    "low quality",
+    "instrumental",
+    "emotional",
+    "noisy",
+    "passionate",
+    "medium tempo",
+    "energetic",
+    "amateur recording",
+    "live performance",
+    "slow tempo",
+    "acoustic drums",
+    "fast tempo",
+    "mono",
+    "groovy",
+    "bass guitar",
+    "electric guitar",
+    "acoustic guitar",
+    "instrumental music",
+    "uptempo",
+    "piano",
+    "punchy kick",
+    "poor audio quality",
+    "punchy snare",
+    "groovy bass",
+    "happy",
+    "male voice",
+    "moderate tempo",
+    "e-bass",
+    "shimmering hi hats",
+    "male vocal",
+    "rock",
+    "percussion",
+    "no voices",
+    "youthful",
+    "pop",
+    "male singer",
+    "spirited",
+    "romantic",
+    "electronic drums",
+    "exciting",
+    "upbeat",
+    "bass",
+    "loud",
+    "mellow",
+    "keyboard harmony",
+    "fun",
+    "cheerful",
+    "easygoing",
+    "flat male vocal",
+    "e-guitar"
+  ],
+  "history": {
+    "epoch": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "train_loss": [
+      0.24962383773231853,
+      0.1615279713726562,
+      0.13626577022174993,
+      0.12119096387987552,
+      0.10906124414633149,
+      0.09884639624236287,
+      0.08958212326726188,
+      0.08104542618536431,
+      0.07357812386707983,
+      0.06631853077830611,
+      0.05982896031649864,
+      0.053983254526890276,
+      0.04856555331228436,
+      0.043448504100999104,
+      0.03899567588434919
+    ],
+    "val_macro_f1": [
+      0.07883682951289812,
+      0.2482927215985499,
+      0.29429192006439536,
+      0.3747448412277021,
+      0.42414342404722793,
+      0.46596152879679875,
+      0.5283233962192009,
+      0.5498654798013702,
+      0.5629790609352041,
+      0.573208993005841,
+      0.5922600188536561,
+      0.6226386267220954,
+      0.6322660759505875,
+      0.6205972396488618,
+      0.6238854969463898
+    ],
+    "val_micro_f1": [
+      0.2468179302711677,
+      0.4311490978157645,
+      0.48022079116835326,
+      0.5427574171029669,
+      0.5853855470327008,
+      0.5990016638935108,
+      0.6443057722308893,
+      0.6575963718820862,
+      0.6548808608762491,
+      0.6616710378418883,
+      0.6659283868586194,
+      0.6809127127852227,
+      0.6826685492410872,
+      0.6783242258652095,
+      0.6802919708029197
+    ]
+  },
+  "example_predictions": [
+    {
+      "caption": "This music is instrumental. The tempo is fast with vigorous electric guitar feedback, hard hitting drums, amplified keyboard harmony and bass guitar. The music is loud, aggressive, boisterous, vital, persistent and high-powered. This music is a Heavy Metal Instrumental.",
+      "actual_tags": [
+        "instrumental",
+        "fast tempo",
+        "loud"
+      ],
+      "predicted_tags": [
+        "instrumental",
+        "fast tempo",
+        "loud"
+      ]
+    },
+    {
+      "caption": "The low quality recording features a Northern Soul song sung by passionate female vocalists and background harmonizing female vocals over punchy snare, groovy bass and sustained brass melody. It sounds upbeat, crushed, vintage, emotional and funky. The recording is noisy and in mono.",
+      "actual_tags": [
+        "low quality",
+        "emotional",
+        "noisy",
+        "mono",
+        "punchy snare",
+        "groovy bass",
+        "upbeat"
+      ],
+      "predicted_tags": [
+        "low quality",
+        "noisy",
+        "passionate",
+        "mono",
+        "groovy bass"
+      ]
+    },
+    {
+      "caption": "This song is an instrumental. The tempo is fast with a lively keyboard harmony and rhythmic steel pan . It is minimal and rhythmic. The harmony is simple , straight and the steel pan adds an interesting layer to it. The music is engaging, interesting, energetic, spirited and melodic.",
+      "actual_tags": [
+        "instrumental",
+        "energetic",
+        "fast tempo",
+        "spirited"
+      ],
+      "predicted_tags": [
+        "instrumental",
+        "energetic",
+        "fast tempo"
+      ]
+    },
+    {
+      "caption": "The low quality recording features wide shimmering bells, some inhale sounds, muffled acoustic rhythm guitar chords and natural sound effects. It sounds happy and fun.",
+      "actual_tags": [
+        "low quality",
+        "happy",
+        "fun"
+      ],
+      "predicted_tags": [
+        "low quality",
+        "passionate",
+        "happy"
+      ]
+    },
+    {
+      "caption": "The low quality recording features a children's song played on some small device that reproduces mono sound. The song consists of a funny male vocal, alongside harmonizing vocals, singing over a shimmering bell melody and some claps. It sounds happy, fun, joyful, muffled and the recording is noisy.",
+      "actual_tags": [
+        "low quality",
+        "noisy",
+        "mono",
+        "uptempo",
+        "happy",
+        "fun"
+      ],
+      "predicted_tags": [
+        "low quality",
+        "noisy",
+        "happy",
+        "fun"
+      ]
+    }
+  ]
+}

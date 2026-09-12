@@ -1,0 +1,224 @@
+{
+  "test_recall": {
+    "caption_to_audio_R@1": 0.003766478342749529,
+    "audio_to_caption_R@1": 0.009416195856873822,
+    "caption_to_audio_R@5": 0.030131826741996232,
+    "audio_to_caption_R@5": 0.02448210922787194,
+    "caption_to_audio_R@10": 0.04896421845574388,
+    "audio_to_caption_R@10": 0.04896421845574388
+  },
+  "zero_shot_vs_task3": {
+    "task4_zero_shot": {
+      "macro_f1": 0.10816254111226607,
+      "micro_f1": 0.10856093642414505,
+      "auc_pr": 0.0759801006646522,
+      "threshold": 0.21688085794448853
+    },
+    "task3_supervised": null
+  },
+  "qualitative_examples": [
+    {
+      "query_caption": "This is an instrumental song featuring a french horn being played. The french horn plays the main melody. This is accompanied by a piano playing arpeggiated chords. A bass plays the root notes of the chords. There are no other instruments in this song. This is a slow tempo song. This song has a romantic and relaxing mood. This song can be played in a romantic movie.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "EC4GbkL3XvI.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "xGHN0kphhWM.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "Ieef9l-gWN8.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This hip-hop song features programmed percussion playing a hip-hop beat. The bass follows the root notes of the chords. Synth strings play chords. The sound of an object being thrown can be heard. The sound of shattering glass is also heard. This song appears in a game.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "DP72GDe6AAs.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "Ac4M-EkdkDs.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "ITYv4126yhk.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This is an electronic music piece. The female vocalist is singing in a rap-like repetitive manner and is occasionally joined by a male vocalist. There is a repeating one-note hollering female vocal sample in the background. A keyboard plays a simple tune. There is a loud electronic drum beat in the rhythmic background. The atmosphere is energetic and danceable. This piece can be played in nightclubs and bars in Thailand. It could also be used in dancing courses as an accompaniment piece.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "SG24NL2Xi3A.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "pWms_9wpRB4.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "6Kb0q9J8lPA.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This symphonic rock song features a male voice singing the main melody in common time. This is accompanied by percussion playing a simple beat with single and double strokes on the snare in alternate counts. The bass plays only the root notes of the chords with no embellishments. The strings play a repetitive phrase of three notes throughout the song. The mood of the voice is storytelling. This song can be played in a rags to riches movie.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "JXS5eW7g4HY.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "38R9Vnwt890.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "XKp670Yh0E0.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. There is a calming and relaxing atmosphere to this piece. This piece can be used in the background of a meditation video. It could also be played during a meditation session at a course.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "7JMN4DdhwsM.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "0a91szM1Ivw.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "_0-2meOf9qY.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This clip features a percussion based song with no other instruments. The focus is on the kick drum and snare with minimal use of cymbals. Hand claps are played along with the snare. The percussion beat is random. Sounds of snipping are played. Crunchy sounds are played in this clip. There is the sound of sizzling in this clip.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "IYtQfDsFVfA.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "h7ty6D1LunA.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "Ls6qMcgpdlM.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "The low quality recording features a jazz song that consists of groovy soft drums, smooth bass and saxophone solo, over which there is shoe tapping. It sounds like it is a live performance and like something you would watch in a theatre. It is a bit noisy and in mono.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "uuHTPvG-BYI.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "BL181hSAG60.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "8kx5ST65Fog.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "This is a classic music piece belonging to the baroque era. There is a soprano male vocal singing at an extraordinarily high pitch. The melody is being played by the violin and the cello. There is an emotional atmosphere to this piece. It could be playing in the background at a classy restaurant. It could also work well in the soundtrack of an art movie.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "nL4zx0-mi14.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "2RU4CSDzS-g.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "08mf5GxT820.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "The music features a melody being played in unison by a piano and a group of strings. At the same time these two also fill up the music space with harmony. A type of drum that resembles the taiko drum but I think is smaller in size can be heard in the background. In the background a synth pad provides soft harmony.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "aIIEI33EUqI.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "y_TnstfXeBQ.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "IFumVgqOVaM.wav",
+          "is_correct_match": false
+        }
+      ]
+    },
+    {
+      "query_caption": "The low quality recording features an alternative/indie song that consists of electric guitar chords, groovy repetitive bass guitar, harsh electric guitar solo, percussive toms and shimmering shakers. It sounds muffled, harsh, groovy and it is uptempo and noisy.",
+      "top3_matches": [
+        {
+          "rank": 1,
+          "audio_file": "CP3phqztym0.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 2,
+          "audio_file": "N_Wx35sNqdM.wav",
+          "is_correct_match": false
+        },
+        {
+          "rank": 3,
+          "audio_file": "APUDprnfOIs.wav",
+          "is_correct_match": false
+        }
+      ]
+    }
+  ],
+  "num_samples": 5308,
+  "embed_dim": 256,
+  "temperature": 0.07
+}
