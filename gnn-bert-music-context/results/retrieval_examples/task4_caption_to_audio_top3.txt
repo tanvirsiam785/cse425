@@ -1,0 +1,65 @@
+Task 4 — Qualitative Retrieval Examples (caption -> top-3 audio matches)
+MusicCaps test split, contrastive dual-encoder (GraphSAGE + BERT, InfoNCE)
+==========================================================================
+
+Query caption: This is an instrumental song featuring a french horn being played. The french horn plays the main me...
+  Top-1: EC4GbkL3XvI.wav
+  Top-2: xGHN0kphhWM.wav
+  Top-3: Ieef9l-gWN8.wav
+
+Query caption: This hip-hop song features programmed percussion playing a hip-hop beat. The bass follows the root n...
+  Top-1: DP72GDe6AAs.wav
+  Top-2: Ac4M-EkdkDs.wav
+  Top-3: ITYv4126yhk.wav
+
+Query caption: This is an electronic music piece. The female vocalist is singing in a rap-like repetitive manner an...
+  Top-1: SG24NL2Xi3A.wav
+  Top-2: pWms_9wpRB4.wav
+  Top-3: 6Kb0q9J8lPA.wav
+
+Query caption: This symphonic rock song features a male voice singing the main melody in common time. This is accom...
+  Top-1: JXS5eW7g4HY.wav
+  Top-2: 38R9Vnwt890.wav
+  Top-3: XKp670Yh0E0.wav
+
+Query caption: This is an instrumental sitar music piece. The sitar is being played at a medium-to-high range. Ther...
+  Top-1: 7JMN4DdhwsM.wav
+  Top-2: 0a91szM1Ivw.wav
+  Top-3: _0-2meOf9qY.wav
+
+Query caption: This clip features a percussion based song with no other instruments. The focus is on the kick drum ...
+  Top-1: IYtQfDsFVfA.wav
+  Top-2: h7ty6D1LunA.wav
+  Top-3: Ls6qMcgpdlM.wav
+
+Query caption: The low quality recording features a jazz song that consists of groovy soft drums, smooth bass and s...
+  Top-1: uuHTPvG-BYI.wav
+  Top-2: BL181hSAG60.wav
+  Top-3: 8kx5ST65Fog.wav
+
+Query caption: This is a classic music piece belonging to the baroque era. There is a soprano male vocal singing at...
+  Top-1: nL4zx0-mi14.wav
+  Top-2: 2RU4CSDzS-g.wav
+  Top-3: 08mf5GxT820.wav
+
+Query caption: The music features a melody being played in unison by a piano and a group of strings. At the same ti...
+  Top-1: aIIEI33EUqI.wav
+  Top-2: y_TnstfXeBQ.wav
+  Top-3: IFumVgqOVaM.wav
+
+Query caption: The low quality recording features an alternative/indie song that consists of electric guitar chords...
+  Top-1: CP3phqztym0.wav
+  Top-2: N_Wx35sNqdM.wav
+  Top-3: APUDprnfOIs.wav
+
+--------------------------------------------------------------------
+Notes (Section 7 of the report): manual inspection shows the top-3
+retrieved audio files are usually stylistically coherent with the
+query caption's described instrumentation and tempo, even when the
+exact ground-truth clip is not ranked first — e.g. a "female
+vocalist singing a melodic song... slow tempo" query retrieved its
+correct match at rank 3, with the two higher-ranked distractors also
+being slow-tempo vocal tracks. This suggests the contrastive
+embedding space captures coarse acoustic categories (tempo, presence
+of vocals) rather than fine-grained caption-specific detail at this
+batch size (32) and training scale (20 epochs).

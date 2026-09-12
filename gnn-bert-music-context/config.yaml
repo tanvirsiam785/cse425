@@ -1,0 +1,71 @@
+# GNN-BERT Music Context — global configuration
+# Mirrors the hyperparameters and dataset settings described in the report
+# (report/final_report.pdf, Sections 2-6).
+
+seed: 42
+
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  splits_dir: data/splits
+  musiccaps_csv: data/raw/musiccaps-public.csv
+  musiccaps_audio_dir: data/raw/musiccaps_audio        # MusicCapsAudio5308 re-upload
+  fma_audio_dir: data/raw/fma_small
+  fma_tracks_csv: data/raw/fma_metadata/tracks.csv
+  num_tag_vocab: 50                                     # top-50 most frequent MusicCaps aspects
+
+audio_features:
+  sample_rate: 22050
+  fma_segment_duration_sec: 5.0
+  musiccaps_segment_duration_sec: 2.0
+  n_chroma: 12
+  n_mels: 128
+  mel_fixed_frames: 640
+  chroma_edge_similarity_threshold: 0.85
+
+tasks:
+  "1":  # BERT baseline (Table 1)
+    model: bert-base-uncased
+    epochs: 15
+    batch_size: 16
+    learning_rate: 2.0e-4
+    max_seq_len: 128
+
+  "2":  # GraphSAGE + CNN/majority baselines (Table 2)
+    gnn:
+      hidden_channels: 64
+      out_channels: 128
+      num_layers: 3
+      epochs: 50
+      learning_rate: 1.0e-3
+      optimizer: adam
+    cnn_baseline:
+      epochs: 50
+      learning_rate: 1.0e-3
+    split: official_fma            # official train/val/test column, no random split (avoids artist leakage)
+    train_tracks: 6400
+    val_tracks: 800
+    test_tracks: 800
+
+  "3":  # GNN-BERT fusion ablation (Table 3)
+    variants: [bert_only, gnn_only, early_concat, cross_attention]
+    cross_attention_heads: 4
+    epochs: 15
+    batch_size: 16
+    learning_rate: 2.0e-5
+    train_pairs: 4246
+    val_pairs: 531
+    test_pairs: 531
+
+  "4":  # Contrastive dual-encoder (Tables 4-5)
+    projection_dim: 256
+    temperature: 0.07
+    batch_size: 32
+    epochs: 20
+    learning_rate: 2.0e-5
+
+output:
+  results_dir: results
+  plots_dir: results/plots
+  retrieval_examples_dir: results/retrieval_examples
+  metrics_file: results/metrics.json

@@ -1,0 +1,48 @@
+{
+  "task1_bert_baseline": {
+    "dataset": "MusicCaps (553 test captions)",
+    "models": {
+      "B1_majority_class": { "macro_f1": 0.000, "micro_f1": 0.000 },
+      "BERT_finetuned_masked": { "macro_f1": 0.627, "micro_f1": 0.696 }
+    },
+    "per_tag_examples": {
+      "low_quality": { "f1": 0.98 },
+      "mono": { "f1": 0.98 },
+      "spirited": { "f1": 0.19 },
+      "easygoing": { "f1": 0.29 }
+    }
+  },
+  "task2_gnn_baseline": {
+    "dataset": "FMA-small (official split, 800 test tracks)",
+    "models": {
+      "B1_majority_class": { "accuracy": 0.125, "macro_f1": 0.028 },
+      "B2_cnn_mel_spectrogram": { "accuracy": 0.445, "macro_f1": 0.441 },
+      "GraphSAGE_chroma_only": { "accuracy": 0.331, "macro_f1": 0.305 }
+    },
+    "per_genre_gnn_examples": {
+      "Hip-Hop": { "f1": 0.52 },
+      "Instrumental": { "f1": 0.42 },
+      "Experimental": { "f1": 0.08 }
+    }
+  },
+  "task3_fusion_ablation": {
+    "dataset": "MusicCaps + MusicCapsAudio5308 (4246 train / 531 val / 531 test)",
+    "variants": {
+      "BERT_only": { "macro_f1": 0.575, "micro_f1": 0.679, "auc_pr": 0.674 },
+      "GNN_only_chroma": { "macro_f1": 0.000, "micro_f1": 0.000, "auc_pr": 0.070 },
+      "Early_concatenation": { "macro_f1": 0.567, "micro_f1": 0.666, "auc_pr": 0.676 },
+      "Cross_attention": { "macro_f1": 0.611, "micro_f1": 0.678, "auc_pr": 0.664 }
+    },
+    "best_variant": "Cross_attention"
+  },
+  "task4_contrastive_retrieval": {
+    "dataset": "MusicCaps test split (531 pairs)",
+    "retrieval": {
+      "Caption_to_Audio": { "R@1": 0.004, "R@5": 0.030, "R@10": 0.049 },
+      "Audio_to_Caption": { "R@1": 0.009, "R@5": 0.025, "R@10": 0.049 }
+    },
+    "zero_shot_tagging": { "macro_f1": 0.108, "micro_f1": 0.109, "auc_pr": 0.076 },
+    "comparison_supervised_fusion_task3": { "macro_f1": 0.611, "micro_f1": 0.678, "auc_pr": 0.664 },
+    "random_floor_R@10_531_items": 0.019
+  }
+}
